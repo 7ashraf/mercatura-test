@@ -1,0 +1,32 @@
+{
+  "name": "mercatura-test",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@coinbase/wallet-sdk": "^4.0.4",
+    "@dfinity/agent": "^2.1.1",
+    "@dfinity/auth-client": "^2.1.1",
+    "@dfinity/candid": "^2.1.1",
+    "@dfinity/ledger-icp": "^2.5.0",
+    "@dfinity/principal": "^2.1.1",
+    "@dfinity/utils": "^2.5.0",
+    "@psychedelic/plug-connect": "^0.2.0",
+    "@reown/appkit": "^1.0.3",
+    "@reown/appkit-adapter-ethers": "^1.0.3",
+    "@walletconnect/web3wallet": "^1.15.2",
+    "ethers": "^6.13.2",
+    "next": "14.2.13",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.13"
+  }
+}
