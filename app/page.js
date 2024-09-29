@@ -14,7 +14,7 @@ import { AuthClient } from "@dfinity/auth-client";
 export default function Home() {
 
   const [principalId, setPricnipalId] = useState(null);
-  const [accountId, setAccountId] = useState(null);
+  const [accountId, setAccountId] = useState('');
   const [connected, setConnected] = useState(null);
   const [balance, setBalance] = useState(null)
   
@@ -76,7 +76,7 @@ export default function Home() {
     });
     const accountIdentifier = AccountIdentifier.fromHex('c1b6f089de4df9f86ca0151a0911b6be8d059c56b77120c54d2b64476aa25216')
     console.log(ledger)
-    const balance = (await ledger.accountBalance({accountIdentifier: 'c1b6f089de4df9f86ca0151a0911b6be8d059c56b77120c54d2b64476aa25216', certified: false }));
+    const balance = (await ledger.accountBalance({accountIdentifier: window.ic.plug.accountId, certified: false }));
     setBalance(Number(balance) / 100000000)
 
 
@@ -121,9 +121,9 @@ export default function Home() {
     return (
       <div className={styles.page}>
         <h1>Connected</h1>
-        <p>Principal ID: {principalId}</p>
-        <p>Account ID: {accountId}</p>
-        <p>Your Balance: {balance ? balance.toString() : 'Loading...'}</p>
+        <h1>Principal ID: {principalId}</h1>
+        <h1>Account ID: {accountId}</h1>
+        <h1>Your Balance: {balance ? balance.toString() : 'Loading...'}</h1>
       </div>
     );
   }
